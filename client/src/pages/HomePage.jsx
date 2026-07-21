@@ -15,6 +15,7 @@ import LeagueTable from "../components/LeagueTable";
 import { medalColor } from "../utils/medalColors";
 import Team from "../components/Team";
 import Details from "../components/Details";
+import BestPlayer from "../components/BestPlayers";
 
 
 
@@ -56,6 +57,10 @@ export default function Kickabout() {
 
       {/* Facts strip */}
       <Facts />
+
+
+      {/* Best players strip */}
+      <BestPlayer />
 
       {/* League table */}
       <LeagueTable />

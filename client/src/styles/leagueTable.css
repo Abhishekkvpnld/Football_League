@@ -1,0 +1,54 @@
+.fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.league-card {
+  backdrop-filter: blur(14px);
+  transition: all 0.35s ease;
+}
+
+.league-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+.table-row {
+  transition: all 0.25s ease;
+}
+
+.table-row:hover {
+  background: rgba(215, 255, 92, 0.08);
+  transform: scale(1.01);
+}
+
+.rank-badge {
+  transition: all 0.25s ease;
+}
+
+.table-row:hover .rank-badge {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.team-name {
+  transition: color 0.25s ease;
+}
+
+.table-row:hover .team-name {
+  color: #d7ff5c;
+}
+
+.points {
+  color: #d7ff5c;
+  text-shadow: 0 0 8px rgba(215, 255, 92, 0.7);
+}
