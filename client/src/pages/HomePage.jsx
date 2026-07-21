@@ -16,6 +16,9 @@ import { medalColor } from "../utils/medalColors";
 import Team from "../components/Team";
 import Details from "../components/Details";
 import BestPlayer from "../components/BestPlayers";
+import GoalChart from "../components/Chart";
+import { Link } from "react-router-dom";
+import PosterSlider from "../components/PosterSlide";
 
 
 
@@ -55,12 +58,18 @@ export default function Kickabout() {
       {/* Hero */}
       <Hero />
 
+      {/* Poster Slider */}
+      <PosterSlider />
+
       {/* Facts strip */}
       <Facts />
 
 
       {/* Best players strip */}
       <BestPlayer />
+
+      {/* Goal Chart */}
+      <GoalChart />
 
       {/* League table */}
       <LeagueTable />
@@ -91,13 +100,13 @@ export default function Kickabout() {
           <p className="mx-auto mt-6 mb-9 max-w-md text-base" style={{ color: colors.chalkDim }}>
             Bring a friend, bring boots, bring nothing at all. Every Sunday is a fresh game and everyone gets a run-out.
           </p>
-          <a
-            href="#"
+          <Link
+            to="/poll"
             className="btn-primary-fx inline-flex items-center gap-2 rounded px-6 py-4 text-sm font-bold"
             style={{ fontFamily: fonts.mono, background: colors.lime, color: colors.pitchDark }}
           >
             Reserve your spot for Sunday →
-          </a>
+          </Link>
         </div>
       </div>
 
