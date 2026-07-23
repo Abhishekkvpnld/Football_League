@@ -1,7 +1,7 @@
 import { colors } from "../../utils/colors"
 import { fonts } from "../../utils/fonts"
 import { useCountdown } from "../../hooks/useCountdown"
-import { pad } from "../../pages/HomePage";
+import { pad } from "../../pages/Users/HomePage";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
