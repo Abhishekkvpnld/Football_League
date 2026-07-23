@@ -11,7 +11,8 @@ export const UserProvider = ({ children }) => {
 
     const user = {
         name: "John Doe",
-        email: "john.doe@example.com"
+        email: "john.doe@example.com",
+        role:"admin",
     };
 
     return (

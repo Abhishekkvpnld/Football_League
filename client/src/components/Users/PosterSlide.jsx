@@ -7,7 +7,7 @@ import {
     Clock,
 } from "lucide-react";
 
-import { posters } from "../utils/posters"; 
+import { posters } from "../../utils/posters"; 
 
 export default function PosterSlider() {
     const [current, setCurrent] = useState(0);

@@ -1,6 +1,6 @@
-import { colors } from "../utils/colors";
-import { facts } from "../utils/facts";
-import { fonts } from "../utils/fonts";
+import { colors } from "../../utils/colors";
+import { facts } from "../../utils/facts";
+import { fonts } from "../../utils/fonts";
 import {
   Trophy,
   Users,

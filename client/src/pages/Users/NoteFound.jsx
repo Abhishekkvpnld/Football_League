@@ -37,7 +37,7 @@ export default function NotFound() {
           </h3>
 
           <p className="mt-2 text-slate-700">
-            <strong>Sunday</strong> • 8:00 PM
+            <strong>Sunday</strong> • 7:00 AM
           </p>
 
           <p className="text-slate-500">

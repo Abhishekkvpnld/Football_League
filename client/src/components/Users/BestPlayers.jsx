@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Trophy, Goal, Handshake, Crown, Sparkles, PartyPopper } from "lucide-react";
-import { topPlayers } from "../utils/Players";
+import { topPlayers } from "../../utils/Players";
 
 const FIREWORK_COLORS = ["#a3e635", "#22d3ee", "#fbbf24", "#f472b6", "#ffffff"];
 
@@ -71,7 +71,7 @@ const BestPlayer = () => {
 
             {/* Champion / Player of the Tournament */}
             {champion && (
-                <div className="max-w-7xl mx-auto px-4 mb-16">
+                <div className="max-w-5xl mx-auto px-4 mb-16 ">
                     <div className="relative max-w-md mx-auto">
                         {/* glow ring */}
                         <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-lime-400 via-cyan-400 to-lime-400 opacity-60 blur-xl" />
@@ -170,59 +170,128 @@ const BestPlayer = () => {
             )}
 
             {/* Rest of the players, scrolling */}
-            <div className="relative">
+            <div className="relative overflow-hidden py-4">
+
                 <div className="flex gap-6 animate-[scroll_25s_linear_infinite] w-max">
+
                     {[...rest, ...rest].map((player, index) => (
+
                         <div
                             key={index}
                             className="
-                w-72
-                bg-slate-900
-                border
-                border-slate-800
-                rounded-3xl
-                p-6
-                flex-shrink-0
-                transition-all
-                duration-300
-                hover:-translate-y-3
-                hover:border-lime-400
-                hover:shadow-[0_0_30px_rgba(163,230,53,.35)]
-              "
+          relative
+          w-72
+          bg-slate-900
+          border
+          border-slate-800
+          rounded-3xl
+          p-6
+          flex-shrink-0
+          transition-all
+          duration-300
+          hover:-translate-y-3
+          hover:scale-105
+          hover:border-lime-400
+          hover:shadow-[0_0_35px_rgba(163,230,53,.35)]
+        "
                         >
+
+                            {/* Rank Badge */}
+                            {index < 2 && (
+                                <div
+                                    className={`
+              absolute
+              top-4
+              left-4
+              w-12
+              h-12
+              rounded-full
+              flex
+              items-center
+              justify-center
+              text-xl
+              font-black
+              shadow-xl
+              border-4
+              border-slate-900
+              ${index === 0
+                                            ? "bg-gradient-to-br from-slate-200 to-slate-400 text-slate-900"
+                                            : "bg-gradient-to-br from-amber-500 to-orange-700 text-white"
+                                        }
+            `}
+                                >
+                                    {index + 2}
+                                </div>
+                            )}
+
+                            {/* Profile */}
                             <img
                                 src={player.image}
                                 alt={player.name}
                                 className="
-                  w-24 h-24
-                  rounded-full
-                  mx-auto
-                  object-cover
-                  border-4
-                  border-lime-400
-                "
+            w-24
+            h-24
+            rounded-full
+            mx-auto
+            object-cover
+            border-4
+            border-lime-400
+            transition-all
+            duration-300
+            hover:scale-110
+          "
                             />
 
+                            {/* Name */}
                             <h3 className="text-center text-white text-xl font-bold mt-5">
                                 {player.name}
                             </h3>
 
+                            {/* Stats */}
                             <div className="mt-6 grid grid-cols-2 gap-4">
-                                <div className="bg-slate-800 rounded-xl p-4 text-center">
-                                    <Goal className="mx-auto text-lime-400" size={22} />
-                                    <p className="text-3xl font-bold text-white mt-2">{player.goals}</p>
-                                    <p className="text-slate-400 text-sm">Goals</p>
+
+                                <div className="bg-slate-800 rounded-xl p-4 text-center transition hover:bg-slate-700">
+
+                                    <Goal
+                                        className="mx-auto text-lime-400"
+                                        size={22}
+                                    />
+
+                                    <p className="text-3xl font-bold text-white mt-2">
+                                        {player.goals}
+                                    </p>
+
+                                    <p className="text-slate-400 text-sm">
+                                        Goals
+                                    </p>
+
                                 </div>
 
-                                <div className="bg-slate-800 rounded-xl p-4 text-center">
-                                    <Handshake className="mx-auto text-cyan-400" size={22} />
-                                    <p className="text-3xl font-bold text-white mt-2">{player.assists}</p>
-                                    <p className="text-slate-400 text-sm">Assists</p>
+                                <div className="bg-slate-800 rounded-xl p-4 text-center transition hover:bg-slate-700">
+
+                                    <Handshake
+                                        className="mx-auto text-cyan-400"
+                                        size={22}
+                                    />
+
+                                    <p className="text-3xl font-bold text-white mt-2">
+                                        {player.assists}
+                                    </p>
+
+                                    <p className="text-slate-400 text-sm">
+                                        Assists
+                                    </p>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     ))}
+
                 </div>
+
             </div>
         </section>
     );

@@ -1,7 +1,8 @@
-import { colors } from "../utils/colors"
-import { fonts } from "../utils/fonts"
-import { useCountdown } from "../hooks/useCountdown"
-import { pad } from "../pages/HomePage";
+import { colors } from "../../utils/colors"
+import { fonts } from "../../utils/fonts"
+import { useCountdown } from "../../hooks/useCountdown"
+import { pad } from "../../pages/HomePage";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
    
@@ -41,20 +42,20 @@ const Hero = () => {
                         — rain, shine, or monsoon drizzle.
                     </p>
                     <div className="mt-9 flex flex-wrap items-center gap-4">
-                        <a
-                            href="#join"
+                        <Link
+                            to="/poll"
                             className="btn-primary-fx inline-flex items-center gap-2 rounded px-6 py-4 text-sm font-bold"
                             style={{ fontFamily: fonts.mono, background: colors.lime, color: colors.pitchDark }}
                         >
                             Get a spot this week →
-                        </a>
-                        <a
-                            href="#fixture"
+                        </Link>
+                        <Link
+                            to="/fixture"
                             className="btn-ghost-fx inline-flex items-center gap-2 rounded border px-6 py-4 text-sm"
                             style={{ fontFamily: fonts.mono, borderColor: colors.line, color: colors.chalk }}
                         >
                             See this Sunday's match
-                        </a>
+                        </Link>
                     </div>
 
                     {/* countdown scoreboard */}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { nextSunday7am } from "../pages/HomePage";
+import { nextSunday7am } from "../pages/Users/HomePage";
 
 export function useCountdown() {
   const [remaining, setRemaining] = useState(() => nextSunday7am().getTime() - Date.now());

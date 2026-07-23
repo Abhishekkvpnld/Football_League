@@ -20,12 +20,13 @@ const ProfileComponent = ({ setProfileOpen, profileOpen, profileRef }) => {
             transition
             duration-300
             shadow-lg
+            cursor-pointer
             "
             >
 
                 <User
                     size={22}
-                    className="text-slate-900"
+                    className="text-slate-900 hover:scale-110 transition duration-300   "
                 />
 
             </button>

@@ -1,15 +1,17 @@
-import { colors } from "../utils/colors"
-import { fonts } from "../utils/fonts"
-import { useCountdown } from "../hooks/useCountdown"
-import { pad } from "../pages/HomePage";
+import { colors } from "../../utils/colors"
+import { fonts } from "../../utils/fonts"
+import { useCountdown } from "../../hooks/useCountdown"
+import { pad } from "../../pages/Users/HomePage";
 import { Menu, User, LogOut, Settings } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ProfileComponent from "./ProfileComponent";
+import { HashLink } from "react-router-hash-link";
 
 
 const Header = ({ navOpen, setNavOpen }) => {
     const { days, hours, mins } = useCountdown();
+
 
     const [profileOpen, setProfileOpen] = useState(false);
 
@@ -44,22 +46,29 @@ const Header = ({ navOpen, setNavOpen }) => {
                             }}
                         />
                     </div>
-                    <Link to="/" style={{ fontFamily: fonts.display, fontSize: 20, textTransform: "uppercase", letterSpacing: "0.02em" }}>Kickabout</Link>
+                    <Link to="/" className="text-white" style={{ fontFamily: fonts.display, fontSize: 20, textTransform: "uppercase", letterSpacing: "0.02em" }}>Kickabout</Link>
                 </div>
 
-                <nav className="hidden md:flex gap-8 text-sm uppercase tracking-wider">
-                    {["Fixture", "Table", "Teams", "Poll",].map((item) => (
-                        <a
-                            key={item}
-                            href={item === "Poll" ? "/poll" : `#${item.toLowerCase()}`}
-                            className="opacity-75 hover:opacity-100 transition-opacity"
-                            style={{ color: colors.chalk }}
-                            onMouseEnter={(e) => (e.currentTarget.style.color = colors.lime)}
-                            onMouseLeave={(e) => (e.currentTarget.style.color = colors.chalk)}
-                        >
-                            {item}
-                        </a>
-                    ))}
+                <nav className="hidden md:flex gap-8 text-sm text-white uppercase tracking-wider">
+                    <HashLink smooth to="/#fixture">
+                        Fixture
+                    </HashLink>
+
+                    <HashLink smooth to="/#table">
+                        Table
+                    </HashLink>
+
+                    <HashLink smooth to="/#teams">
+                        Teams
+                    </HashLink>
+
+                    <Link to="/poll">
+                        Poll
+                    </Link>
+
+                    <Link to="/admin">
+                        Admin
+                    </Link>
                 </nav>
 
                 <div className="flex items-center gap-4">
@@ -96,13 +105,59 @@ const Header = ({ navOpen, setNavOpen }) => {
                 </button>
             </div>
 
+
+
             {navOpen && (
-                <div className="md:hidden flex flex-col gap-4 px-8 pb-5 text-sm uppercase tracking-wider">
-                    {["Fixture", "Table", "Teams", "Join", "Profile"].map((item) => (
-                        <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-lime hover:text-white-700 hover:scale-110 transition-all" onClick={() => setNavOpen(false)}>
+                <div className="md:hidden flex flex-col gap-4 px-8 pb-5 text-sm uppercase tracking-wider bg-slate-900">
+
+                    {["Fixture", "Table", "Teams"].map((item) => (
+                        <Link
+                            key={item}
+                            to={`/#${item.toLowerCase()}`}
+                            onClick={() => setNavOpen(false)}
+                            className="
+          text-white
+          hover:text-lime-400
+          hover:translate-x-2
+          transition-all
+          duration-300
+          font-medium
+        "
+                        >
                             {item}
-                        </a>
+                        </Link>
                     ))}
+
+                    <Link
+                        to="/poll"
+                        onClick={() => setNavOpen(false)}
+                        className="
+        text-white
+        hover:text-lime-400
+        hover:translate-x-2
+        transition-all
+        duration-300
+        font-medium
+      "
+                    >
+                        Poll
+                    </Link>
+
+                    <Link
+                        to="/admin"
+                        onClick={() => setNavOpen(false)}
+                        className="
+        text-white
+        hover:text-lime-400
+        hover:translate-x-2
+        transition-all
+        duration-300
+        font-medium
+      "
+                    >
+                        Admin
+                    </Link>
+
                 </div>
             )}
         </header>

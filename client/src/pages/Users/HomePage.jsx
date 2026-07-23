@@ -1,24 +1,24 @@
-import "../styles/home.css";
+import "../../styles/home.css";
 import { useState, useEffect } from "react";
-import Footer from "../components/Footer";
-import { colors } from "../utils/colors";
-import { fonts } from "../utils/fonts";
-import { useCountdown } from "../hooks/useCountdown";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Facts from "../components/Facts";
-import { facts } from "../utils/facts";
-import { table } from "../utils/table";
-import { teams } from "../utils/teams";
-import { steps } from "../utils/steps";
-import LeagueTable from "../components/LeagueTable";
-import { medalColor } from "../utils/medalColors";
-import Team from "../components/Team";
-import Details from "../components/Details";
-import BestPlayer from "../components/BestPlayers";
-import GoalChart from "../components/Chart";
+import Footer from "../../components/Users/Footer";
+import { colors } from "../../utils/colors";
+import { fonts } from "../../utils/fonts";
+import { useCountdown } from "../../hooks/useCountdown";
+import Header from "../../components/Users/Header";
+import Hero from "../../components/Users/Hero";
+import Facts from "../../components/Users/Facts";
+import { facts } from "../../utils/facts";
+import { table } from "../../utils/table";
+import { teams } from "../../utils/teams";
+import { steps } from "../../utils/steps";
+import LeagueTable from "../../components/Users/LeagueTable";
+import { medalColor } from "../../utils/medalColors";
+import Team from "../../components/Users/Team";
+import Details from "../../components/Users/Details";
+import BestPlayer from "../../components/Users/BestPlayers";
+import GoalChart from "../../components/Users/Chart";
 import { Link } from "react-router-dom";
-import PosterSlider from "../components/PosterSlide";
+import PosterSlider from "../../components/Users/PosterSlide";
 
 
 

@@ -1,7 +1,7 @@
-import { colors } from "../utils/colors"
-import { fonts } from "../utils/fonts"
-import { table } from "../utils/table"
-import { medalColor } from "../utils/medalColors"
+import { colors } from "../../utils/colors"
+import { fonts } from "../../utils/fonts"
+import { table } from "../../utils/table"
+import { medalColor } from "../../utils/medalColors"
 import { Trophy } from "lucide-react";
 
 

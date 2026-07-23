@@ -1,5 +1,5 @@
-import { colors } from "../utils/colors";
-import { fonts } from "../utils/fonts";
+import { colors } from "../../utils/colors";
+import { fonts } from "../../utils/fonts";
 
 const Footer = () => {
     return (

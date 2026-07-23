@@ -1,6 +1,6 @@
-import { colors } from "../utils/colors";
-import { fonts } from "../utils/fonts";
-import { teams } from "../utils/teams";
+import { colors } from "../../utils/colors";
+import { fonts } from "../../utils/fonts";
+import { teams } from "../../utils/teams";
 
 
 

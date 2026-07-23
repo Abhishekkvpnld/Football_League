@@ -1,6 +1,6 @@
-import { colors } from "../utils/colors"
-import { fonts } from "../utils/fonts"
-import { steps } from "../utils/steps"
+import { colors } from "../../utils/colors"
+import { fonts } from "../../utils/fonts"
+import { steps } from "../../utils/steps"
 
 const Details = () => {
     return (
