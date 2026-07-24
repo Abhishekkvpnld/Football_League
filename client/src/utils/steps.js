@@ -12,6 +12,6 @@ export const steps = [
   {
     tag: "7:00 AM SHARP",
     title: "Show up and play",
-    body: "Riverside Turf, Pitch 2. Bring boots and water. We bring the ball, bibs, and a referee.",
+    body: "Kolappa Turf, Pitch 2. Bring boots and water. We bring the ball, bibs, and a referee.",
   },
 ];

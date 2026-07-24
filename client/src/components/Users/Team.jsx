@@ -9,7 +9,7 @@ import {
 const teams = [
   {
     id: 1,
-    name: "FC Lions",
+    name: "FC Team A",
     short: "A",
     captain: "John Doe",
     coach: "Michael Smith",
@@ -21,7 +21,7 @@ const teams = [
   },
   {
     id: 2,
-    name: "FC Tigers",
+    name: "FC Team B",
     short: "B",
     captain: "Alex Morgan",
     coach: "David Wilson",

@@ -5,7 +5,7 @@ import { pad } from "../../pages/Users/HomePage";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-   
+
     const { days, hours, mins, secs } = useCountdown();
 
     return (
@@ -104,9 +104,9 @@ const Hero = () => {
                                     className="mx-auto mb-2 rounded-full flex items-center justify-center"
                                     style={{ width: 54, height: 54, background: `linear-gradient(135deg, ${colors.pitch}, ${colors.pitchLight})`, color: colors.chalk, fontFamily: fonts.display, fontSize: 18, boxShadow: "0 6px 14px rgba(23,50,38,0.35)" }}
                                 >
-                                    GK
+                                    TA
                                 </div>
-                                <div className="text-xs font-semibold uppercase tracking-wide">Green Kites</div>
+                                <div className="text-xs font-semibold uppercase tracking-wide">Team A</div>
                             </div>
                             <div className="px-2 text-sm" style={{ fontFamily: fonts.mono, color: colors.pitch, opacity: 0.45 }}>
                                 VS
@@ -116,9 +116,9 @@ const Hero = () => {
                                     className="mx-auto mb-2 rounded-full flex items-center justify-center"
                                     style={{ width: 54, height: 54, background: `linear-gradient(135deg, ${colors.clay}, #e08a52)`, color: colors.chalk, fontFamily: fonts.display, fontSize: 18, boxShadow: "0 6px 14px rgba(209,114,58,0.35)" }}
                                 >
-                                    RC
+                                    TB
                                 </div>
-                                <div className="text-xs font-semibold uppercase tracking-wide">Red Clay</div>
+                                <div className="text-xs font-semibold uppercase tracking-wide">Team B</div>
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@ const Hero = () => {
                             </div>
                             <div>
                                 <div className="text-[10px] uppercase opacity-50 tracking-wide">Format</div>
-                                <div className="text-sm font-bold">7-a-side · 40 min</div>
+                                <div className="text-sm font-bold">7-a-side · 60 min</div>
                             </div>
                         </div>
 

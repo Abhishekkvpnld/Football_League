@@ -16,6 +16,7 @@ const ProfilePage = lazy(() => import("./pages/Users/ProfilePage"));
 const Poll = lazy(() => import("./pages/Users/Poll"));
 const GalleryPage = lazy(() => import("./pages/Users/Gallary"));
 const NotFound = lazy(() => import("./pages/Users/NoteFound"));
+const PlayersList = lazy(() => import("./pages/Users/Players"));
 
 const Unauthorized = lazy(() =>
   import("./components/admin/UnAuthorized")
@@ -66,6 +67,7 @@ export default function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/poll" element={<Poll />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/players" element={<PlayersList />} />
           </Route>
           {/* ---------- Admin Routes ---------- */}
 

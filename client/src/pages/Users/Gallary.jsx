@@ -1,6 +1,7 @@
 import { ImageIcon, Upload } from "lucide-react";
 import Header from "../../components/Users/Header";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const galleryImages = [
     "https://images.unsplash.com/photo-1517466787929-bc90951d0974",
@@ -17,6 +18,12 @@ export default function GalleryPage() {
 
     const [images, setImages] = useState(galleryImages);
     const [navOpen, setNavOpen] = useState(false);
+
+
+    const handleUpload = async () => {
+        // Handle image upload logic here
+        toast.error("Image upload feature is not implemented yet.");
+    }
 
     return (
         <>
@@ -38,7 +45,10 @@ export default function GalleryPage() {
                         </p>
                     </div>
 
-                    <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white transition hover:bg-emerald-700 sm:w-auto">
+                    <button 
+                        className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white transition hover:bg-emerald-700 sm:w-auto"
+                        onClick={handleUpload}
+                    >
                         <Upload size={18} />
                         Upload Image
                     </button>

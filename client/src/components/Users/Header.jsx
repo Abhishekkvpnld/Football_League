@@ -50,27 +50,27 @@ const Header = ({ navOpen, setNavOpen }) => {
                 </div>
 
                 <nav className="hidden md:flex gap-8 text-sm text-white uppercase tracking-wider">
-                    <HashLink smooth to="/#fixture">
-                        Fixture
-                    </HashLink>
+                    <Link to="/players" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
+                        Players
+                    </Link>
 
-                    <HashLink smooth to="/#table">
+                    <HashLink smooth to="/#table" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
                         Table
                     </HashLink>
 
-                    <HashLink smooth to="/#teams">
+                    <HashLink smooth to="/#teams" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
                         Teams
                     </HashLink>
 
-                    <Link to="/poll">
+                    <Link to="/poll" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
                         Poll
                     </Link>
 
-                    <Link to="/gallery">
+                    <Link to="/gallery" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
                         Gallery
                     </Link>
 
-                    <Link to="/admin">
+                    <Link to="/admin" className="hover:text-red-400 hover:scale-110 transition-all duration-300 font-medium">
                         Admin
                     </Link>
                 </nav>
@@ -114,7 +114,24 @@ const Header = ({ navOpen, setNavOpen }) => {
             {navOpen && (
                 <div className="md:hidden flex flex-col gap-4 px-8 pb-5 text-sm uppercase tracking-wider bg-slate-900">
 
-                    {["Fixture", "Table",].map((item) => (
+                    {/* Players */}
+                    <Link
+                        to="/players"
+                        onClick={() => setNavOpen(false)}
+                        className="
+        text-white
+        hover:text-lime-400
+        hover:translate-x-2
+        transition-all
+        duration-300
+        font-medium
+      "
+                    >
+                        Players
+                    </Link>
+
+
+                    {["Table",].map((item) => (
                         <Link
                             key={item}
                             to={`/#${item.toLowerCase()}`}
