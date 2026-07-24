@@ -54,17 +54,17 @@ export default function Sidebar({
                 </div>
 
                 {/* Menu */}
-                <div className="flex-1 overflow-y-auto px-4 py-6">
+                <div className="flex-1 overflow-y-auto hide-scrollbar px-4 py-6">
                     <p className="px-4 mb-3 text-xs uppercase tracking-widest text-slate-500">
                         Main Menu
                     </p>
 
-                    <nav className="space-y-2">
-                        {menus.map((menu) => (
+                    <nav className="space-y-2 ">
+                        {menus?.map((menu) => (
                             <NavLink
-                                key={menu.title}
-                                to={menu.path}
-                                end={menu.path === "/admin"}
+                                key={menu?.title}
+                                to={menu?.path}
+                                end={menu?.path === "/admin"}
                                 className={({ isActive }) =>
                                     `group flex items-center gap-4 rounded-2xl px-4 py-3 transition-all duration-300
                   ${isActive

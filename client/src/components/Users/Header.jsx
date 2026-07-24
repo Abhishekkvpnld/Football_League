@@ -66,6 +66,10 @@ const Header = ({ navOpen, setNavOpen }) => {
                         Poll
                     </Link>
 
+                    <Link to="/gallery">
+                        Gallery
+                    </Link>
+
                     <Link to="/admin">
                         Admin
                     </Link>
@@ -110,7 +114,7 @@ const Header = ({ navOpen, setNavOpen }) => {
             {navOpen && (
                 <div className="md:hidden flex flex-col gap-4 px-8 pb-5 text-sm uppercase tracking-wider bg-slate-900">
 
-                    {["Fixture", "Table", "Teams"].map((item) => (
+                    {["Fixture", "Table",].map((item) => (
                         <Link
                             key={item}
                             to={`/#${item.toLowerCase()}`}
@@ -128,6 +132,7 @@ const Header = ({ navOpen, setNavOpen }) => {
                         </Link>
                     ))}
 
+                    {/* Poll */}
                     <Link
                         to="/poll"
                         onClick={() => setNavOpen(false)}
@@ -143,6 +148,23 @@ const Header = ({ navOpen, setNavOpen }) => {
                         Poll
                     </Link>
 
+                    {/* Gallery */}
+                    <Link
+                        to="/gallery"
+                        onClick={() => setNavOpen(false)}
+                        className="
+        text-white
+        hover:text-lime-400
+        hover:translate-x-2
+        transition-all
+        duration-300
+        font-medium
+      "
+                    >
+                        Gallery
+                    </Link>
+
+                    {/* Admin */}
                     <Link
                         to="/admin"
                         onClick={() => setNavOpen(false)}

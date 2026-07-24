@@ -1,12 +1,24 @@
+import { useEffect } from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { useUser } from "../../context/UserContext"; // Update the path
+import { useUser } from "../../context/UserContext";
+import toast from "react-hot-toast";
 
 export default function AdminProtectedRoute({ children }) {
   const { user, loading } = useUser();
 
+  useEffect(() => {
+    if (!loading) {
+      if (!user) {
+        toast.error("Please login to continue.");
+      } else if (user.role !== "admin") {
+        toast.error("You are not authorized to access this page.");
+      }
+    }
+  }, [user, loading]);
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex h-screen items-center justify-center">
         Loading...
       </div>
     );
@@ -22,6 +34,5 @@ export default function AdminProtectedRoute({ children }) {
     return <Navigate to="/unauthorized" replace />;
   }
 
-  // Admin access
   return children ? children : <Outlet />;
 }
